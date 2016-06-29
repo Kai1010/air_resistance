@@ -1,19 +1,15 @@
-
-float x0=0, y0, z0;
+float x0, y0, z0;
 float x, y=-75, z;
 float vx, vy, vz;
-float vx0=0 , vy0, vz0=0;
+float vx0, vy0, vz0;
 float ax, ay, az;
 float ax1,ay1,az1;
 float a1;
 float dAngle,dAngle0,ddAngle, ddAngle1; //<>//
 float Angle;
 float Angle0,camAngle0;
-int a;
 float k = 0.5;
-int n,m;
 float dT,T;
-float camT,camt0,camt1,U;
 
 
 
@@ -27,16 +23,10 @@ void setup() {
 
 void draw() {
     checkChanges();
-    n = 1;
-  m = m + n;
-  
-  dT = float(n)*40/1000;
-  T = T + dT;
 
   if (keysChangeFlag['a'] == true  || keysChangeFlag['d'] == true 
     )
   {
-    camt0 = T;
     camAngle0 = Angle;
   }
   if (keysChangeFlag['w'] == true)
@@ -74,13 +64,10 @@ void draw() {
   }
   if (keysChangeFlag['r'] == true)
   {
-    vx0 = vz0 = 0;
+    vx0 = vz0 = vx = vz = 0;
   }
- 
-  n = 1;
-  m = m + n;
   
-  dT = float(n)*40/1000;
+  dT = float(1)*40/1000;
   T = T + dT;
   ax1 = a1 * sin(radians(Angle));
   az1 = a1 * cos(radians(Angle));
@@ -100,8 +87,8 @@ void draw() {
   
   
   float camAngle;
-  camT = T - camt0;
   camAngle =  Angle0 + dAngle * (dT - 0.5);
+  
   x0 = x;
   z0 = z;
   vx0 = vx;
@@ -113,7 +100,7 @@ void draw() {
   println("(x,y,z)="+"("+x+","+y +","+z+")");
   println("(vx,vy,vz)="+"("+vx+","+vy +","+vz+")");
   println("(ax,ay,az)="+"("+ax+","+ay +","+az+")");
-  println("T" +T);
+  println("T=" +T);
   println("Angle" + int(Angle));
   background(255); 
   camera(800 * sin(radians(camAngle)) + x, -200 + y ,800 * cos(radians(camAngle)) + z, // 視点X, 視点Y, 視点Z
@@ -133,9 +120,9 @@ void draw() {
   box(300);
   popMatrix();
    final int step = 300;  
-  for(int i = -width*1; i < width*1; i += step) {  
+  for(int i = -900; i < 900; i += step) {  
     beginShape(QUAD_STRIP);  
-    for(int j = -width*80; j <= width*1; j += step) {  
+    for(int j = -18000; j <= 1000; j += step) {  
       vertex(i, 0, j);  
       vertex(i + step, 0, j);  
     }  
