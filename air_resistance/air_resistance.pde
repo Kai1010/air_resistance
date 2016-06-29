@@ -15,7 +15,7 @@ float dT,T;
 
 void setup() {
   size(1100, 700, P3D);
- fill(200); //<>//
+  fill(200); //<>//
   stroke(0);
   float fov = radians(45);  //視野角
   perspective(fov, float(width)/float(height), 1.0, 10000.0);
@@ -95,7 +95,7 @@ void draw() {
   vz0 = vz;
   dAngle0 = dAngle;
   Angle0 = Angle;
-  println("(vx0,vy0,vz0)="+"("+vx0+","+vy0 +","+vz0+")");
+  //println("(vx0,vy0,vz0)="+"("+vx0+","+vy0 +","+vz0+")");
   //println("(x0,y0,z0)="+"("+x0+","+y0 +","+z0+")");
   println("(x,y,z)="+"("+x+","+y +","+z+")");
   println("(vx,vy,vz)="+"("+vx+","+vy +","+vz+")");
