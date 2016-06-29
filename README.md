@@ -1,15 +1,15 @@
 # air_resistance
 
-ABOUT THIS PROGRAM
-This program is air resistance simulation with processing.
-You can add acceleration to a object by using key.
-"air_resistance.pde" is main program.
-"CheckChanges.pde" is subprogram to detect key input.
-To use, download both and run these in directory named "air_resistance".
-
-
-KEY ASSIGN
-"w" to fowoard
-"s" to back
-"a" to lotate for left
+ABOUT THIS PROGRAM</br>
+This program is air resistance simulation with processing.</br>
+You can add acceleration to a object by using key.</br>
+"air_resistance.pde" is main program.</br>
+"CheckChanges.pde" is subprogram to detect key input.</br>
+To use, download both and run these in directory named "air_resistance".</br>
+</br>
+</br>
+KEY ASSIGN</br>
+"w" to fowoard</br>
+"s" to back</br>
+"a" to lotate for left</br>
 "d" to lotate for right
